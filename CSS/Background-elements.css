@@ -45,7 +45,7 @@ color: #DAE1E7;
 }
 
 
-.basicButton{
+#basicButton{
     width: 265px;
 height: 49px;
 border-radius: 100px;
@@ -54,5 +54,19 @@ border: 1px solid #000000;
 background: #00909E;
 box-sizing: border-box;
 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#basicButton.left{
+  position: absolute;
+  left: 90px;
+ 
+
+}
+
+#basicButton.right{
+  position: absolute;
+  right: 90px;
+  
+
 }
 
