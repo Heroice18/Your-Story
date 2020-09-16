@@ -1,0 +1,58 @@
+body{
+    background-color: #142850;
+
+}
+
+@font-face{
+    font-family: "Acme"; 
+    src: url("../Fonts/Acme/Acme-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Roboto"; 
+    src: url("../Fonts/Roboto/Roboto-Bold.ttf");
+}
+
+.descriptionText{
+
+    background: #27496D;
+
+font-family: Acme;
+font-style: normal;
+font-weight: normal;
+font-size: 44px;
+padding-left: 110px;
+padding-right: 110px;
+width: 70%;
+margin-left: auto;
+  margin-right: auto;
+
+text-align: center;
+
+
+color: #DAE1E7;
+
+}
+
+.logo{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 284px;
+    height: 239px;
+
+
+}
+
+
+.basicButton{
+    width: 265px;
+height: 49px;
+border-radius: 100px;
+font-family: Roboto;
+border: 1px solid #000000;
+background: #00909E;
+box-sizing: border-box;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
