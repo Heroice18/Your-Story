@@ -21,7 +21,7 @@ word-wrap: break-word;
 font-family: Acme;
 font-style: normal;
 font-weight: normal;
-font-size: 23px;
+font-size: 135%;
 padding-left: 120px;
 padding-right: 100px;
 width: 70%;
@@ -78,3 +78,77 @@ box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-bottom: 5%;
 }
 
+#promptText{
+
+font-family: Acme;
+font-style: normal;
+font-weight: normal;
+font-size: 23px;
+text-align: center;
+color: #DAE1E7;
+
+}
+
+#promptText.fantasy{
+/* width: 40%;
+position: relative;
+padding-bottom: 2%; */
+  padding-right: 5%;
+  padding-left: 5%;
+
+}
+
+.fantasyImg{
+/* position: relative;
+padding-top: 5%;
+width: 25%;
+left: 5%; */
+width: 70%;
+padding-left: 15%;
+
+}
+
+#promptText.sciFi{
+  /* width: 100%;
+  position: relative; */
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.sciFiImg{
+  /* position: relative;
+  padding-top: 5%;
+  width: 25%;
+  left: 35%; */
+  width:  95%;
+  
+}
+
+#promptText.mystery{
+  /* width: 177%;
+  position: relative; */
+  padding-right: 5%;
+  padding-left: 5%;
+  width: 80%;
+}
+
+.mysteryImg{
+  /* padding-top: 5%;
+width: 30%;
+left: 5%;
+  position: relative; */
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15%;
+
+
+}
+
+.selection
+{
+  
+  margin-left: auto;
+  margin-right: auto;
+}
