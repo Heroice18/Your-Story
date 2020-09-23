@@ -10,25 +10,56 @@ function selectImage(classID)
         var check = document.getElementById(classID).src;
         console.log("IN HERE " + check);
 
-        if(document.getElementById(classID).src== "./Images/dragon-selected.jpg")
+        if(check.includes("selected"))
         {
-            console.log("Working");
+ 
+            document.getElementById(classID).src = "./Images/dragon.jpg";
+  
         }
-        document.getElementById(classID).src = "./Images/dragon-selected.jpg";
-    }
+        else
+        {
+            document.getElementById(classID).src = "./Images/dragon-selected.jpg";
+        }
+          }
 
     if(classID == "mysteryImg")
     {
-        console.log("IN HERE " + classID);
+        
+        var check = document.getElementById(classID).src;
+     
 
-        document.getElementById(classID).src = "./Images/mag glass-selected.png";
-    }
+        if(check.includes("selected"))
+        {
+            document.getElementById(classID).src = "./Images/mag glass.jpg";
+        }
+        else
+        {
+            document.getElementById(classID).src = "./Images/mag glass-selected.png";
+        }
+       }
 
     if(classID == "sciFiImg")
-    {
-        console.log("IN HERE " + classID);
-        document.getElementById(classID).src = "./Images/Sci Fi space-selected.jpg";
-    }
+    { 
+        var checker = document.getElementById(classID).src;
+        
+
+        if(checker.includes("selected"))
+        {
+            document.getElementById(classID).src = "./Images/Sci Fi space.jpg";
+            console.log("Working");
+        }
+        else
+        {
+            document.getElementById(classID).src = "./Images/Sci Fi space-selected.jpg";
+        }
+     
+            }
 
         
+}
+
+
+function checkData()
+{
+    
 }
