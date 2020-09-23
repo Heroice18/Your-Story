@@ -164,3 +164,8 @@ left: 5%;
   bottom: 38%
 
 }
+
+#fileLoader
+{
+    display:none;
+}
