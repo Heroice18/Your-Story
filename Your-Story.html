@@ -1,8 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <body>
-		<h1>Your Story</h1>
-    </body>
+<!-- source code:  https://github.com/cometchat-pro-tutorials/jquery-chat-app -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> jQuery Chat Application </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="css/Your-Story.css">
+</head>
+<body>
+    <div class="chat-app-wrapper">
+        <div class="chat">
+            <div class="container">
+                <div class="msg-header">
+                    <div class="active">
+                        <h5>
+                        	<a href="index.html">
+ 								<img src="./Images/Logo.png">
+							</a>	
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="chat-page">
+                    <div class="msg-inbox">
+                        <div class="chats" id="chats">
+                            <div class="msg-page" id="msg-page">
+                                <div>
+                                    <div id="group-message-holder">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="msg-bottom">
+                            <form class="message-form" id="message-form">
+                                <div class="input-group">
+                                    <input type="text" id="input-text" class="form-control message-input" placeholder="Type something" required/>
+                                    <div id="send-message-spinner" class="spinner">
+                                            <svg width="30" height="30" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#003">
+                                                <g fill="none" fill-rule="evenodd">
+                                                  <g transform="translate(1 1)" stroke-width="2">
+                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                                                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                      <animateTransform
+                                                      attributeName="transform"
+                                                      type="rotate"
+                                                      from="0 18 18"
+                                                      to="360 18 18"
+                                                      dur="1s"
+                                                      repeatCount="indefinite"/>
+                                                    </path>
+                                                  </g>
+                                                </g>
+                                              </svg>
+                                    </div> 
+                                    <input id="loggedInUID" type="hidden"/>
+                                </div>
+                                 <br>
+                                 <input type = "button" id = "saveStory" class = "saveStory" value = "Save Story" onclick="location.href ='Prompt-Selection.html'">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>  
+<script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@1.8/CometChat.js"></script>  
 
 
+<!-- scripts -->
+<script src="JavaScript/chatService.js"></script>
+<script src="JavaScript/script.js"></script>
+
+</body>
 </html>

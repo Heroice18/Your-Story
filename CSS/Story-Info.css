@@ -57,3 +57,11 @@ input[type=submit]:hover {
 input[type=button]:hover {
   background-color: #00a4b3;
 }
+
+.logo{
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 284px;
+    height: 239px;
+}
