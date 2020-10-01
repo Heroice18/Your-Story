@@ -98,7 +98,7 @@ padding-bottom: 2%; */
 
 }
 
-.fantasyImg{
+#fantasyImg{
 /* position: relative;
 padding-top: 5%;
 width: 25%;
@@ -115,7 +115,7 @@ padding-left: 15%;
   padding-left: 5%;
 }
 
-.sciFiImg{
+#sciFiImg{
   /* position: relative;
   padding-top: 5%;
   width: 25%;
@@ -132,7 +132,7 @@ padding-left: 15%;
   width: 80%;
 }
 
-.mysteryImg{
+#mysteryImg{
   /* padding-top: 5%;
 width: 30%;
 left: 5%;
@@ -151,4 +151,21 @@ left: 5%;
   
   margin-left: auto;
   margin-right: auto;
+}
+
+.checkmark{
+  width:5%;
+  position: absolute;
+  
+}
+
+#check1{
+  left: 24%;
+  bottom: 38%
+
+}
+
+#fileLoader
+{
+    display:none;
 }
