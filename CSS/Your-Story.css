@@ -288,7 +288,7 @@ nav {
 }
 
 .received-msg-inbox p span {
-  color: #black;
+  color: #000000;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 14px;
@@ -556,3 +556,11 @@ nav .spinner {
 .hidden {
   display: none;
 }
+
+
+.logoYourStory{
+  display: block;
+  margin-left: 270%;
+  margin-right: 270%;
+}
+
