@@ -66,6 +66,7 @@ const chatService = function() {
 sendMessage: function(message){
     $('#send-message-spinner').show();
     messageArray.push(message);
+    return true;
 },
 onMessageReceived: function() {
     $('#empty-chat').hide();

@@ -11,7 +11,7 @@ console.log("VALUE IS: " + stringData);
 
 var profanities = new Array("ass", "cunt", "pope", "fuck", "bitch", "damn", 
 "asshole", "faggot", "motherfucker", "dick", "pussy", 
-"bastard", );
+"bastard", "shit");
 
 var doesInclude = false;
 
@@ -24,9 +24,12 @@ Alert that alerts the user to not use profanity.
 if(doesInclude == true)
     {
         alert("Please do not write profanity into the bar.");
+        return false;
+        // delete message
     }
 else
     {
+		return true;
         //alert("NO CURSES");
         //All good
     }

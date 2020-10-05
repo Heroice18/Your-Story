@@ -10,9 +10,11 @@ $(document).ready(function() {
            message
        }
        $('.old-chats').remove();
-       chatService.sendMessage(text);
-       chatService.onMessageReceived();
-
+       if (chatService.sendMessage(text) == true) {
+    	   if (textCheck.profanityCheck() == true) {
+        	   chatService.onMessageReceived();
+    	   }
+	   }
        $('#message-form').trigger('reset');
    });
 });
