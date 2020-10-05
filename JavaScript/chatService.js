@@ -70,8 +70,11 @@ sendMessage: function(message){
 },
 onMessageReceived: function() {
     $('#empty-chat').hide();
+    console.log("1");
     $('#group-message-holder').show();
+    console.log("2");
     $('#send-message-spinner').hide();
+    console.log("3");
     $.each(messageArray, function(index, value) {
         let messageList;
         if (value.username !== "User") {

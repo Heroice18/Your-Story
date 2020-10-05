@@ -1,20 +1,71 @@
 // source code:  https://github.com/cometchat-pro-tutorials/jquery-chat-app
 $(document).ready(function() {
    chatService.fetchMessages();
+   
 
    $('#message-form').submit(function(e) {    
-       e.preventDefault();
+    
+        console.log("1");
+    e.preventDefault();
+    if (profanityCheck() == true) {
        let message = $('#input-text').val();
        let text = {
            username: "User",
            message
        }
+       console.log("2");
        $('.old-chats').remove();
+       console.log("3");
        if (chatService.sendMessage(text) == true) {
-    	   if (textCheck.profanityCheck() == true) {
-        	   chatService.onMessageReceived();
+        console.log("4");
+               chatService.onMessageReceived();
+               console.log("5");
     	   }
-	   }
+           console.log("6");
        $('#message-form').trigger('reset');
+       console.log("7");
+    }
    });
+   console.log("12");
+
 });
+
+
+
+function profanityCheck(){
+
+    String.prototype.includes = function(str) { return this.indexOf(str) != -1; };
+    var stringData = document.getElementById("input-text").value;
+    
+    stringData = stringData.toLowerCase();
+    
+    console.log("VALUE IS: " + stringData);
+    
+    var profanities = new Array("ass", "cunt", "pope", "fuck", "bitch", "damn", 
+    "asshole", "faggot", "motherfucker", "dick", "pussy", 
+    "bastard", "shit");
+    
+    var doesInclude = false;
+    
+    doesInclude = profanities.some(word => stringData.includes(word));
+    
+    /*
+    Here Cameron we can make it so that the AI responds or have an
+    Alert that alerts the user to not use profanity. 
+    */
+    if(doesInclude == true)
+        {
+            alert("Please do not write profanity into the bar.");
+            return false;
+            // delete message
+        }
+    else
+        {
+            return true;
+            //alert("NO CURSES");
+            //All good
+        }
+    
+    }
+    
+    
