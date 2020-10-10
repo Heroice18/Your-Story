@@ -113,5 +113,30 @@ onMessageReceived: function() {
            const chat = document.getElementById("msg-page");
            chat.scrollTo(0, chat.scrollHeight + 30);
        }
+       
    }
-}();
+
+}
+
+();
+
+
+function saveYourStory()
+{
+  
+    //var userInput = document.getElementById("myText").value;
+    
+    for(var index in messageArray)
+    {
+        console.log("This is " + index);
+    }
+
+
+    var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, "Test.txt");
+
+}
+
+
+
+
