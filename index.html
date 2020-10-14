@@ -4,6 +4,10 @@
     <script src="JavaScript/interfaceFunctions.js"></script>
     <script src="jQuery/interface.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./JavaScript/openCloseFiles.js"></script>
+    <script src="./JavaScript/PDF/pdf.js"></script>
+    <script src="https://npmcdn.com/pdfjs-dist/build/pdf.js"></script>
+    
     <body>
 
       <img src="./Images/Logo.png" onclick="returnHome()" class = "logo">
@@ -18,9 +22,12 @@
 
 <!--<button type="file" title="Load Story" id ="basicButton" class = "right" onclick="loadFile()" accept=".pdf"></button>-->
 
-<input type="file" id="fileLoader" name="files" title="Load File" />
-<input type="button" id="basicButton" class="right" value = "Load Story" onclick="openfileDialog();" />
 
+<!--<input type="button" id="basicButton" class="right" value = "Load Story"  onclick="gettext()"/>-->
+<input type="file" id="file-selector" onclick="openFiles()" accept=".txt">
+<script>
+  
+</script>
 <br><br>
      
       <img class="storyBook" src="Images/Storybook.png"> </img>

@@ -133,18 +133,10 @@ function setInfo(form) {
 	}
 }
 
-function loadFile()
+function newStory()
 {
-//     const fileSelector = document.getElementById('file-selector');
-//   fileSelector.addEventListener('change', (event) => {
-//     const fileList = event.target.files;
-//     console.log(fileList);
-//     window.location.href = "./Your-Story.html";  
-//  });
-
-
-
-  
+    localStorage.clear();
+    console.log("THIS WORKED");
+    //location.href ='Prompt-Selection.html';
 }
-
 
