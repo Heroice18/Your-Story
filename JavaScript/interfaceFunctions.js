@@ -121,5 +121,10 @@ else
 }
 
 
-
+function newStory()
+{
+    localStorage.clear();
+    console.log("THIS WORKED");
+    //location.href ='Prompt-Selection.html';
+}
 
