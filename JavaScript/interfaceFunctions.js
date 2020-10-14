@@ -120,6 +120,18 @@ else
 
 }
 
+function setInfo(form) {
+	window.localStorage.setItem("characterName", form.characterName.value);
+	window.localStorage.setItem("age", form.age.value);
+	window.localStorage.setItem("gender", form.gender.value);
+	
+	var name = document.forms["info"]["characterName"].value;
+	var age = document.forms["info"]["age"].value;
+	if (name == "" || age == "") {
+	    alert("Please fill in all fields.");
+	    return false;
+	}
+}
 
 function loadFile()
 {

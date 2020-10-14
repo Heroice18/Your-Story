@@ -8,11 +8,11 @@
 	<div class = "div2">
 		<h1>Story Info</h1>
 	</div>
-	<form action="Your-Story.html">
+	<form name = "info" method = "post" action = "Your-Story.html" onsubmit = "return setInfo(this);">
 	  <label for="characterName">Character Name</label><br>
-	  <input type="text" id="characterName" name="characterName" class = "characterName" placeholder="Character Name"><br>
+	  <input type="text" name="characterName" id="characterName"  class = "characterName" placeholder="Character Name" value><br>
 	  <label for="age">Character Age</label><br>
-	  <input type="text" id="age" name="age" placeholder="Character Age"><br>
+	  <input type="text" name="age" id="age" placeholder="Character Age"><br>
 	  <label for="gender">Gender</label><br>
 	  <select name="gender" id="gender" placeholder="Gender">
 	    <option value="male">Male</option>
