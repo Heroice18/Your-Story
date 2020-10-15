@@ -1,5 +1,5 @@
 var savedAIContent = "";
-
+var defaultTitle = "YourStory";
 var loadedAIContent = "";
 
 function loadAIData()
@@ -38,7 +38,7 @@ const chatService = function() {
    let messageArray = [
        {
            username: "User",
-           message: "This is a new message"
+           message: "When you enter a command you'll see a chat box like this appear."
        },
        {
            username: "AI",
@@ -194,8 +194,20 @@ function saveYourStory()
         }
     }
 
+    var fileTitle = document.getElementById("userTitle").value;
 
-    download(savedAIContent, "SavedStory", "text" );
+    console.log("Title is: " + fileTitle);
+
+    if(fileTitle != "")
+    {
+        download(savedAIContent, fileTitle, "text" );
+    }
+    else
+    {
+        download(savedAIContent, defaultTitle, "text" );
+    }
+
+    
 
 
   }
