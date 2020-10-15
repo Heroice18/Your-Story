@@ -94,19 +94,24 @@ var fantTag = document.getElementById("fantasyImg").src;
 if(selectionCount == 1)
 {
 
+    /*
+    Remember to assign genre to local storage in the story info page as well
+    */
+
     if(mystTag.includes("selected"))
     {
-        document.cookie = "genre = Mystery";
+        
+        window.localStorage.setItem("genre", "Mystery");
         window.location.href = "./Story-Info.html";
     }
     if(sciFiTag.includes("selected"))
     {
-        document.cookie = "genre = Science Fiction";
+        window.localStorage.setItem("genre", "Sci Fi");
         window.location.href = "./Story-Info.html";
     }
     if(fantTag.includes("selected"))
     {
-        document.cookie = "genre = Fantasy";
+        window.localStorage.setItem("genre", "Fantasy");
         window.location.href = "./Story-Info.html";
     }
 

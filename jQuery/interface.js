@@ -6,8 +6,8 @@ function openfileDialog() {
 }
 
 function openPDF(){
-$('#button').on('click', function() {
-    $('#file-input').trigger('click');
+$('#basicButtonLoad').on('click', function() {
+    $('#file-selector').trigger('click');
   });
 
   
