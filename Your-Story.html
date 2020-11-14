@@ -25,9 +25,8 @@
     console.log(response);
    return response.json();
 })
-.then(data => console.log(data)
+.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
-,localStorage.setItem('saved_model', JSON.stringify(data))
 
 );
 
