@@ -24,27 +24,32 @@
 
 
     async function tensorFlow(){
-        
+        const modelTest;
         fetch("AI-Model/model.json")
 .then(response => {
     console.log(response);
    return response.json();
 })
-.then(data => localStorage.setItem('saved_model.json', JSON.stringify(data))
+.then(data => modelTest = await tf.loadLayersModel(data)
+//localStorage.setItem('saved_model', JSON.stringify(data)
+
+
+//const model = await tf.loadLayersModel('localstorage://saved_model')
+)
 
 
 );
 
 
 
-    const model = await tf.loadLayersModel('localstorage://saved_model.json');
+//    const model = await tf.loadLayersModel('localstorage://saved_model');
 
     //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
   // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
   //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
 
       
-        return model;
+        return modelTest;
 }
 
 //tensorFlow();
