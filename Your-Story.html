@@ -13,6 +13,28 @@
     <link rel="stylesheet" href="CSS/Your-Story.css">
     
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOrf9zDe54yJLLbmGMQ0TbF8KWo7XacZA",
+    authDomain: "your-story-d4144.firebaseapp.com",
+    databaseURL: "https://your-story-d4144.firebaseio.com",
+    projectId: "your-story-d4144",
+    storageBucket: "your-story-d4144.appspot.com",
+    messagingSenderId: "692167708500",
+    appId: "1:692167708500:web:8a5942f4cf7a95e0e7c2c1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
 <!-- Tensorflow Script-->
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js">
@@ -20,24 +42,29 @@
 <script>
 
 
+var storage = firebase.storage();
+var storageRef = storage.ref();
+var modelRef = storageRef.child(model.json);
+
+console.log("Checker: " + modelRef);
    
 
 
-    async function tensorFlow(){
+//     async function tensorFlow(){
         
-        fetch("AI-Model/model.json")
-.then(response => {
-    console.log(response);
-   return response.json();
-})
-.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
+//         fetch("AI-Model/model.json")
+// .then(response => {
+//     console.log(response);
+//    return response.json();
+// })
+// .then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
 
-);
+// );
 
 
 
-    const model = await tf.loadLayersModel('localstorage://saved_model');
+//     const model = await tf.loadLayersModel('localstorage://saved_model');
 
     //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
   // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
