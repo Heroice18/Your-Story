@@ -52,19 +52,20 @@ console.log("Checker: " + modelRef);
 
 
 
-
+        let model = require('./AI-Model/model.json');
+        
 
         async function tensorFlow() {
 
 
-            let response = await fetch("AI-Model/model.json")
+           // let response = await fetch("AI-Model/model.json")
 
-                    console.log(response);
-                    localStorage.setItem('saved_model2', JSON.stringify(response))
-                   var data = await response.json();
+                    //console.log(response);
+                    //localStorage.setItem('saved_model2', JSON.stringify(response))
+                 //  var data = await response.json();
                    // return response.json();
-                   console.log("DATA: " + data);
-                await localStorage.setItem('saved_model', JSON.stringify(data));
+                   console.log("DATA: " + model);
+                await localStorage.setItem('saved_model', JSON.stringify(model));
                 //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
 
