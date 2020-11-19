@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- source code:  https://github.com/cometchat-pro-tutorials/jquery-chat-app -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <link rel="stylesheet" href="CSS/Your-Story.css">
-    
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<!-- <script>
+    <!-- <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCOrf9zDe54yJLLbmGMQ0TbF8KWo7XacZA",
@@ -43,55 +44,58 @@ console.log("Checker: " + modelRef);
 </script> -->
 
 
-<!-- Tensorflow Script-->
+    <!-- Tensorflow Script-->
 
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js">
-</script>
-<script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js">
+    </script>
+    <script>
 
 
 
-    async function tensorFlow(){
-        
-     
-        fetch("AI-Model/model.json")
-.then(response => {
-    console.log(response);
-    localStorage.setItem('saved_model2', JSON.stringify(response))
-   return response.json();
-})
-.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
 
-);
-
-const model = await tf.loadLayersModel('localstorage://saved_model');
+        async function tensorFlow() {
 
 
- 
+            let response = await fetch("AI-Model/model.json")
 
-    //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-  // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-  //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
+                    console.log(response);
+                    localStorage.setItem('saved_model2', JSON.stringify(response))
+                   var data = await response.json();
+                   // return response.json();
+                localStorage.setItem('saved_model', JSON.stringify(data));
+                //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
-      
-        return model;}
+
+                //);
+
+            const model = await tf.loadLayersModel('localstorage://saved_model');
 
 
-//tensorFlow();
 
-const model = tensorFlow();
 
-//const model2 = tf.loadLayersModel('localstorage://saved_model');
+            //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+            // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+            //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
 
-var x = localStorage.getItem('saved_model');
-console.log('LOPO: ' + x);
 
-</script>
+            return model;
+        }
+
+
+        //tensorFlow();
+
+        const model = tensorFlow();
+
+        //const model2 = tf.loadLayersModel('localstorage://saved_model');
+
+        var x = localStorage.getItem('saved_model');
+        console.log('LOPO: ' + x);
+
+    </script>
 
 </head>
+
 <body>
     <div class="chat-app-wrapper">
         <div class="chat">
@@ -99,9 +103,9 @@ console.log('LOPO: ' + x);
                 <div class="msg-header">
                     <div class="active">
                         <h5>
-                        	<a href="index.html">
- 								<img src="./Images/Logo.png" class = "logoYourStory">
-							</a>	
+                            <a href="index.html">
+                                <img src="./Images/Logo.png" class="logoYourStory">
+                            </a>
                         </h5>
                     </div>
                 </div>
@@ -112,7 +116,7 @@ console.log('LOPO: ' + x);
                             <div class="msg-page" id="msg-page">
                                 <div>
                                     <div id="group-message-holder">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -121,35 +125,35 @@ console.log('LOPO: ' + x);
                         <div class="msg-bottom">
                             <form class="message-form" id="message-form">
                                 <div class="input-group">
-                                    <input type="text" id="input-text" class="form-control message-input" placeholder="Type something" required/>
-                                    <div id="send-message-spinner" class="spinner" >
-                                            <svg width="30" height="30" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#003">
-                                                <g fill="none" fill-rule="evenodd">
-                                                  <g transform="translate(1 1)" stroke-width="2">
-                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                                    <input type="text" id="input-text" class="form-control message-input"
+                                        placeholder="Type something" required />
+                                    <div id="send-message-spinner" class="spinner">
+                                        <svg width="30" height="30" viewBox="0 0 38 38"
+                                            xmlns="http://www.w3.org/2000/svg" stroke="#003">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g transform="translate(1 1)" stroke-width="2">
+                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
                                                     <path d="M36 18c0-9.94-8.06-18-18-18">
-                                                      <animateTransform
-                                                      attributeName="transform"
-                                                      type="rotate"
-                                                      from="0 18 18"
-                                                      to="360 18 18"
-                                                      dur="1s"
-                                                      repeatCount="indefinite"/>
+                                                        <animateTransform attributeName="transform" type="rotate"
+                                                            from="0 18 18" to="360 18 18" dur="1s"
+                                                            repeatCount="indefinite" />
                                                     </path>
-                                                  </g>
                                                 </g>
-                                              </svg>
-                                    </div> 
-                                    <input id="loggedInUID" type="hidden"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <input id="loggedInUID" type="hidden" />
                                 </div>
-                                 <br>
-                                 
+                                <br>
+
                             </form>
 
                             <br>
                             <br>
-                            <input type="text" class ="titleInput" id ="userTitle" placeholder="Please Enter Your Title Here">
-                                 <input type = "button" webkitdirectory directory multiple id = "saveStory" class = "saveStory" value = "Save Story" onclick="saveYourStory()"/>
+                            <input type="text" class="titleInput" id="userTitle"
+                                placeholder="Please Enter Your Title Here">
+                            <input type="button" webkitdirectory directory multiple id="saveStory" class="saveStory"
+                                value="Save Story" onclick="saveYourStory()" />
                         </div>
                     </div>
                 </div>
@@ -157,21 +161,23 @@ console.log('LOPO: ' + x);
         </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>  
-<script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@1.8/CometChat.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@1.8/CometChat.js"></script>
 
 
-<!-- scripts -->
-<script src="JavaScript/textCheck.js"></script>
-<script src="JavaScript/chatService.js"></script>
-<script src="JavaScript/script.js"></script>
-<script src="JavaScript/interfaceFunctions.js"></script>
-<script src="JavaScript/openCloseFiles.js"></script>
+    <!-- scripts -->
+    <script src="JavaScript/textCheck.js"></script>
+    <script src="JavaScript/chatService.js"></script>
+    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/interfaceFunctions.js"></script>
+    <script src="JavaScript/openCloseFiles.js"></script>
 
 
-  
+
 
 
 
 </body>
+
 </html>
