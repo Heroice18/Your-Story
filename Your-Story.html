@@ -67,7 +67,8 @@ console.log("Checker: " + modelRef);
 
 
 
-    
+    const model = await tf.loadLayersModel('localstorage://saved_model');
+
     //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
   // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
   //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
@@ -80,11 +81,8 @@ console.log("Checker: " + modelRef);
 
 const model = tensorFlow();
 
-async function passOn(){
-    const model = await tf.loadLayersModel('localstorage://saved_model');
+const model2 = tf.loadLayersModel('localstorage://saved_model');
 
-}
-passOn();
 var x = localStorage.getItem('saved_model');
 console.log('LOPO: ' + x);
 
