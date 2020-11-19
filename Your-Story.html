@@ -63,6 +63,7 @@ console.log("Checker: " + modelRef);
                     localStorage.setItem('saved_model2', JSON.stringify(response))
                    var data = await response.json();
                    // return response.json();
+                   console.log("DATA: " + data);
                 localStorage.setItem('saved_model', JSON.stringify(data));
                 //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
