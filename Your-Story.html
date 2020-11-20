@@ -52,40 +52,44 @@ console.log("Checker: " + modelRef);
 
 
 
-       
-        
+
+
 
         async function tensorFlow() {
 
-           
 
-            //let data = data.json
-            
-           // let data = require('./AI-Model/model.json');
-            let response = await fetch("./AI-Model/model.json")
+            try {
 
-                    console.log(response);
-                    //localStorage.setItem('saved_model2', JSON.stringify(response))
-                   var data = await response.json();
-                   // return response.json();
-                   console.log("DATA: " + data);
+
+                //let data = data.json
+
+                // let data = require('./AI-Model/model.json');
+                let response = await fetch("./AI-Model/model.json")
+
+                console.log(response);
+                //localStorage.setItem('saved_model2', JSON.stringify(response))
+                var data = await response.json();
+                // return response.json();
+                console.log("DATA: " + data);
                 await localStorage.setItem('saved_model', JSON.stringify(data));
                 //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
 
                 //);
 
-            const model = await tf.loadLayersModel('localstorage://saved_model');
+                const model = await tf.loadLayersModel('localstorage://saved_model');
 
 
+                return model;
 
 
-            //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-            // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-            //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
+                //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+                // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+                //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
+            } catch (error) {
+                console.error(error)
+            }
 
-
-            return model;
         }
 
 
