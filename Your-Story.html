@@ -55,6 +55,7 @@ console.log("Checker: " + modelRef);
         
 
         const uploadJSONInput = document.getElementById('jsonModel');
+        console.log("HEYO: " + uploadJSONInput);
 //const uploadWeightsInput = document.getElementById('upload-weights');
 const model =  tf.loadLayersModel(tf.io.browserFiles(
  uploadJSONInput.files[0]));
