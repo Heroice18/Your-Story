@@ -61,12 +61,10 @@ $.getJSON("./AI-Model/model.json", function(json) {
 localStorage.setItem('model_saved', JSON.stringify(model));
 
 
-async function loadModel(){
+
     const newmodel =  tf.loadLayersModel('localstorage://model_saved');
     console.log("Check it: " + newmodel);
-}
 
-loadModel();
 
 
         // async function tensorFlow() {
