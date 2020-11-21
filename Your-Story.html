@@ -57,7 +57,7 @@ $.getJSON("./AI-Model/model.json", function(json) {
     model = json;
 });
 
-localStorage.setItem('model_saved', JSON.stringify(response));
+localStorage.setItem('model_saved', JSON.stringify(model));
 
 async function loadModel(){
     const newmodel = await tf.loadLayersModel('localstorage://model_saved');
