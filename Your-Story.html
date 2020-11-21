@@ -50,14 +50,18 @@ console.log("Checker: " + modelRef);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
+const model;
 
 $.getJSON("./AI-Model/model.json", function(json) {
     console.log(json); // this will show the info it in firebug console
+    model = json;
 });
 
+localStorage.setItem('model_saved', JSON.stringify(response));
 
 async function loadModel(){
-
+    const newmodel = await tf.loadLayersModel('localstorage://model_saved');
+    console.log("Check it: " + newmodel);
 }
 
 loadModel();
