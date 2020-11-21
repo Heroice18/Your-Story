@@ -60,7 +60,7 @@ $.getJSON("./AI-Model/model.json", function(json) {
     localStorage.setItem('modelSaved', JSON.stringify(json));
     var url = localStorage.getItem('modelSaved');
     console.log("URL: " + url);
-    const newmodel = tf.loadLayersModel(url);
+    const newmodel = tf.loadLayersModel(localStorage.getItem('modelSaved'));
 });
 }
 
