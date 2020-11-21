@@ -53,21 +53,29 @@ console.log("Checker: " + modelRef);
     </script>
     <script>
         
+
+        const uploadJSONInput = document.getElementById('jsonModel');
+//const uploadWeightsInput = document.getElementById('upload-weights');
+const model = await tfl.loadLayersModel(tf.io.browserFiles(
+ uploadJSONInput.files[0]));
+
+
+
 //var  model;
 
 
-async function tensorFlow(){
-$.getJSON("./AI-Model/model.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
- //   model = json;
-    localStorage.setItem('modelSaved', JSON.stringify(json));
-    var url = localStorage.getItem('modelSaved');
-    console.log("URL: " + url);
-    const newmodel = tf.loadLayersModel('localstorage');
-});
-}
+// async function tensorFlow(){
+// $.getJSON("./AI-Model/model.json", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+//  //   model = json;
+//     localStorage.setItem('modelSaved', JSON.stringify(json));
+//     var url = localStorage.getItem('modelSaved');
+//     console.log("URL: " + url);
+//     const newmodel = tf.loadLayersModel('localstorage');
+// });
+// }
 
-tensorFlow();
+// tensorFlow();
     
    // console.log("Check it: " + newmodel);
 
