@@ -55,14 +55,14 @@ var  model;
 $.getJSON("./AI-Model/model.json", function(json) {
     console.log(json); // this will show the info it in firebug console
     model = json;
-    localStorage.setItem('model_saved', JSON.stringify(model));
+    localStorage.setItem('modelSaved', JSON.stringify(model));
+    const newmodel =  tf.loadLayersModel('localstorage://modelSaved');
 });
 
-localStorage.setItem('modelSaved', JSON.stringify(model));
 
 
 
-    const newmodel =  tf.loadLayersModel('localstorage://modelSaved');
+    
     console.log("Check it: " + newmodel);
 
 
