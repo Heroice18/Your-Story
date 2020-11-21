@@ -49,7 +49,7 @@ console.log("Checker: " + modelRef);
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script id='loadedModel' type="application/json" src="./AI-Model/model.json">   
+    <script>
     </script>
     <script>
         
@@ -63,7 +63,7 @@ $.getJSON("./AI-Model/model.json", function(json) {
     localStorage.setItem('modelSaved', JSON.stringify(json));
     var url = localStorage.getItem('modelSaved');
     console.log("URL: " + url);
-    const newmodel = tf.loadLayersModel('/AI-Model/model.json');
+    const newmodel = tf.loadLayersModel(json);
 });
 }
 
@@ -197,8 +197,6 @@ tensorFlow();
     <script src="JavaScript/script.js"></script>
     <script src="JavaScript/interfaceFunctions.js"></script>
     <script src="JavaScript/openCloseFiles.js"></script>
-    <script id='loadedModel' type="application/json" src="./AI-Model/model.json">   
-    </script>
 
 
 
