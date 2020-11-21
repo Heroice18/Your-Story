@@ -137,11 +137,11 @@ console.log("Checker: " + modelRef);
     <script>
         
 
-        const uploadJSONInput = document.getElementById('jsonModel');
-        console.log("HEYO: " + uploadJSONInput);
-//const uploadWeightsInput = document.getElementById('upload-weights');
-const model =  tf.loadLayersModel(tf.io.browserFiles(
- uploadJSONInput.files[0]));
+//         const uploadJSONInput = document.getElementById('jsonModel');
+//         console.log("HEYO: " + uploadJSONInput);
+// //const uploadWeightsInput = document.getElementById('upload-weights');
+// const model =  tf.loadLayersModel(tf.io.browserFiles(
+//  uploadJSONInput.files[0]));
 
 
 
@@ -165,28 +165,25 @@ const model =  tf.loadLayersModel(tf.io.browserFiles(
 
 
 
-        // async function tensorFlow() {
+        async function tensorFlow() {
 
 
 
-        //         //let data = data.json
+                //let data = data.json
 
-        //         // let data = require('./AI-Model/model.json');
-        //         let response = await fetch("./AI-Model/model.json")
+                // let data = require('./AI-Model/model.json');
+                let response = await fetch("./AI-Model/model.json")
 
-        //         console.log(response);
-        //         //localStorage.setItem('saved_model2', JSON.stringify(response))
-        //         var data = await response.json();
-        //         // return response.json();
-        //         console.log("DATA: " + JSON.stringify(data));
-        //         await localStorage.setItem('saved_model', JSON.stringify(data));
-        //         //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
+                console.log(response);
+                //localStorage.setItem('saved_model2', JSON.stringify(response))
+                var data = await response.json();
+                // return response.json();
+                console.log("DATA: " + JSON.stringify(data));
+                await localStorage.setItem('saved_model', JSON.stringify(data));
+                //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
 
-
-        //         //);
-
-        //         const model = await tf.loadLayersModel('localstorage://saved_model');
-
+                const model = await tf.loadLayersModel('localstorage://saved_model');
+        }
 
         //         return model;
 
@@ -197,7 +194,7 @@ const model =  tf.loadLayersModel(tf.io.browserFiles(
           
 
         // }
-        //tensorFlow();
+        tensorFlow();
 
         //const model = tensorFlow();
 
