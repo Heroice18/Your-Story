@@ -56,7 +56,7 @@ console.log("Checker: " + modelRef);
 
         const uploadJSONInput = document.getElementById('jsonModel');
 //const uploadWeightsInput = document.getElementById('upload-weights');
-const model = await tfl.loadLayersModel(tf.io.browserFiles(
+const model =  tfl.loadLayersModel(tf.io.browserFiles(
  uploadJSONInput.files[0]));
 
 
