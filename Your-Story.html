@@ -51,79 +51,7 @@ console.log("Checker: " + modelRef);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
     </script>
-    <script>
-        
-
-        const uploadJSONInput = document.getElementById('jsonModel');
-        console.log("HEYO: " + uploadJSONInput);
-//const uploadWeightsInput = document.getElementById('upload-weights');
-const model =  tf.loadLayersModel(tf.io.browserFiles(
- uploadJSONInput.files[0]));
-
-
-
-//var  model;
-
-
-// async function tensorFlow(){
-// $.getJSON("./AI-Model/model.json", function(json) {
-//     console.log(json); // this will show the info it in firebug console
-//  //   model = json;
-//     localStorage.setItem('modelSaved', JSON.stringify(json));
-//     var url = localStorage.getItem('modelSaved');
-//     console.log("URL: " + url);
-//     const newmodel = tf.loadLayersModel('localstorage');
-// });
-// }
-
-// tensorFlow();
-    
-   // console.log("Check it: " + newmodel);
-
-
-
-        // async function tensorFlow() {
-
-
-
-        //         //let data = data.json
-
-        //         // let data = require('./AI-Model/model.json');
-        //         let response = await fetch("./AI-Model/model.json")
-
-        //         console.log(response);
-        //         //localStorage.setItem('saved_model2', JSON.stringify(response))
-        //         var data = await response.json();
-        //         // return response.json();
-        //         console.log("DATA: " + JSON.stringify(data));
-        //         await localStorage.setItem('saved_model', JSON.stringify(data));
-        //         //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
-
-
-        //         //);
-
-        //         const model = await tf.loadLayersModel('localstorage://saved_model');
-
-
-        //         return model;
-
-
-        //         //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-        //         // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
-        //         //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
-          
-
-        // }
-        //tensorFlow();
-
-        //const model = tensorFlow();
-
-        //const model2 = tf.loadLayersModel('localstorage://saved_model');
-
-        // var x = localStorage.getItem('saved_model');
-        // console.log('LOPO: ' + x);
-
-    </script>
+  
 
 </head>
 
@@ -206,6 +134,79 @@ const model =  tf.loadLayersModel(tf.io.browserFiles(
     <script src="JavaScript/script.js"></script>
     <script src="JavaScript/interfaceFunctions.js"></script>
     <script src="JavaScript/openCloseFiles.js"></script>
+    <script>
+        
+
+        const uploadJSONInput = document.getElementById('jsonModel');
+        console.log("HEYO: " + uploadJSONInput);
+//const uploadWeightsInput = document.getElementById('upload-weights');
+const model =  tf.loadLayersModel(tf.io.browserFiles(
+ uploadJSONInput.files[0]));
+
+
+
+//var  model;
+
+
+// async function tensorFlow(){
+// $.getJSON("./AI-Model/model.json", function(json) {
+//     console.log(json); // this will show the info it in firebug console
+//  //   model = json;
+//     localStorage.setItem('modelSaved', JSON.stringify(json));
+//     var url = localStorage.getItem('modelSaved');
+//     console.log("URL: " + url);
+//     const newmodel = tf.loadLayersModel('localstorage');
+// });
+// }
+
+// tensorFlow();
+    
+   // console.log("Check it: " + newmodel);
+
+
+
+        // async function tensorFlow() {
+
+
+
+        //         //let data = data.json
+
+        //         // let data = require('./AI-Model/model.json');
+        //         let response = await fetch("./AI-Model/model.json")
+
+        //         console.log(response);
+        //         //localStorage.setItem('saved_model2', JSON.stringify(response))
+        //         var data = await response.json();
+        //         // return response.json();
+        //         console.log("DATA: " + JSON.stringify(data));
+        //         await localStorage.setItem('saved_model', JSON.stringify(data));
+        //         //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
+
+
+        //         //);
+
+        //         const model = await tf.loadLayersModel('localstorage://saved_model');
+
+
+        //         return model;
+
+
+        //         //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+        //         // const model = await tf.loadLayersModel('http://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
+        //         //const model = await tf.loadLayersModel('https://cors-anywhere.herokuapp.com/http://127.0.0.1:8887/model.json');
+          
+
+        // }
+        //tensorFlow();
+
+        //const model = tensorFlow();
+
+        //const model2 = tf.loadLayersModel('localstorage://saved_model');
+
+        // var x = localStorage.getItem('saved_model');
+        // console.log('LOPO: ' + x);
+
+    </script>
 
 
 
