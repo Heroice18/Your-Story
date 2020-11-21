@@ -63,7 +63,7 @@ $.getJSON("./AI-Model/model.json", function(json) {
     localStorage.setItem('modelSaved', JSON.stringify(json));
     var url = localStorage.getItem('modelSaved');
     console.log("URL: " + url);
-    const newmodel = tf.loadLayersModel(json);
+    const newmodel = tf.loadLayersModel('localstorage');
 });
 }
 
@@ -119,7 +119,7 @@ tensorFlow();
 </head>
 
 <body>
-
+<input type="file" id="jsonModel" src="./AI-Model/model.json" style="visibility: hidden;"/>
     <div class="chat-app-wrapper">
         <div class="chat">
             <div class="container">
