@@ -50,20 +50,23 @@ console.log("Checker: " + modelRef);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
-var  model;
+//var  model;
 
+
+async function tensorFlow(){
 $.getJSON("./AI-Model/model.json", function(json) {
     console.log(json); // this will show the info it in firebug console
-    model = json;
-    localStorage.setItem('modelSaved', JSON.stringify(model));
-    const newmodel =  tf.loadLayersModel('localstorage://modelSaved');
+ //   model = json;
+    localStorage.setItem('modelSaved', JSON.stringify(json));
+    var url = localStorage.getItem('modelSaved');
+    console.log("URL: " + url);
+    const newmodel = tf.loadLayersModel(url);
 });
+}
 
-
-
-
+tensorFlow();
     
-    console.log("Check it: " + newmodel);
+   // console.log("Check it: " + newmodel);
 
 
 
