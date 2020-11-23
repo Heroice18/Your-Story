@@ -179,10 +179,12 @@ console.log("Checker: " + modelRef);
                 var data = await response.json();
                 // return response.json();
                 console.log("DATA: " + JSON.stringify(data));
-                await localStorage.setItem('saved_model', JSON.stringify(data));
-                //.then(data => localStorage.setItem('saved_model', JSON.stringify(data))
+                localStorage.setItem('saved_model', JSON.stringify(data));
+                const modelLocal = localStorage.getItem('saved_model');
+                console.log('Local model: ' + modelLocal);
+                const JSONmod = JSON.parse(modelLocal);
 
-                const model = await tf.loadLayersModel('localstorage://saved_model');
+                const model = await tf.loadLayersModel(JSONmod);
         }
 
         //         return model;
