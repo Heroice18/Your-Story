@@ -181,10 +181,10 @@ console.log("Checker: " + modelRef);
                 console.log("DATA: " + JSON.stringify(data));
                 localStorage.setItem('saved_model', JSON.stringify(data));
                 const modelLocal = localStorage.getItem('saved_model');
-                console.log('Local model: ' + modelLocal);
+                //console.log('Local model: ' + modelLocal);
                 const JSONmod = JSON.parse(modelLocal);
 
-                const model = await tf.loadLayersModel(JSONmod);
+                const model = await tf.loadLayersModel('https://github.com/Heroice18/Your-Story/blob/devel/AI-Model/model.json');
         }
 
         //         return model;
