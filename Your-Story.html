@@ -186,7 +186,8 @@ console.log("Checker: " + modelRef);
 
                 const model = await tf.loadLayersModel('./AI-Model/model.json');
 
-                model.generate_text(model);
+                const test = model.predict("Check");
+                console.log("Checking data: " + test);
         }
 
 
