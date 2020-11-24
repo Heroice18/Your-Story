@@ -185,6 +185,8 @@ console.log("Checker: " + modelRef);
                 const JSONmod = JSON.parse(modelLocal);
 
                 const model = await tf.loadLayersModel('./AI-Model/model.json');
+
+                model.generate_text(model);
         }
 
 
