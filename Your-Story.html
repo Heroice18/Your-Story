@@ -186,7 +186,8 @@ console.log("Checker: " + modelRef);
 
                 const model = await tf.loadLayersModel('./AI-Model/model.json');
 
-                const test = model.predict("C");
+                const t = tf.linspace(0, 1, 100);
+                const test = model.predict(t);
                 console.log("Checking data: " + test);
         }
 
