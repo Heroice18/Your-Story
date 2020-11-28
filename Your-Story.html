@@ -205,10 +205,13 @@ console.log("Checker: " + modelRef);
         {
             $.ajax({
               url: "./Phython/test.py",
-             
-            }).done(function(response) {
-
-             alert(response);
+              dataType:'string',
+              success: function(data){
+                  console.log("LK: " + data)
+              },
+              error: function(request, status, error) { 
+              console.log("Error: " + error) 
+              }
             });
         }
 
