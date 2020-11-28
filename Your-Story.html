@@ -205,7 +205,7 @@ console.log("Checker: " + modelRef);
         {
             $.ajax({
               url: "./Phython/test.py",
-              data: {param: text},
+              type: "GET",
               success: function(dataR){
                   console.log("LK: " + dataR)
               },
