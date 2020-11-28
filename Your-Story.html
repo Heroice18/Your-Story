@@ -178,7 +178,7 @@ console.log("Checker: " + modelRef);
                 //localStorage.setItem('saved_model2', JSON.stringify(response))
                 var data = await response.json();
                 // return response.json();
-                console.log("DATA: " + JSON.stringify(data));
+               // console.log("DATA: " + JSON.stringify(data));
                 localStorage.setItem('saved_model', JSON.stringify(data));
                 const modelLocal = localStorage.getItem('saved_model');
                 //console.log('Local model: ' + modelLocal);
@@ -205,6 +205,7 @@ console.log("Checker: " + modelRef);
         {
             $.ajax({
               url: "./Phython/test.py",
+              data: {param: text},
               success: function(data){
                   console.log("LK: " + data)
               },
