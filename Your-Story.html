@@ -186,9 +186,9 @@ console.log("Checker: " + modelRef);
 
                 const model = await tf.loadLayersModel('./AI-Model/model.json');
 
-                const t = tf.linspace(1, 0, 256);
-                const test = model.predict(t);
-                console.log("Checking data: " + test);
+                // const t = tf.linspace(1, 0, 256);
+                // const test = model.predict(t);
+                // console.log("Checking data: " + test);
         }
 
 
@@ -204,12 +204,10 @@ console.log("Checker: " + modelRef);
         function testPhy()
         {
             $.ajax({
-            type: "POST",
-            url: "./Phython/test.py",
-            data: { param: text}
-            }).done(function hello( o ) {
-            // do something
-            console.log("Data from Phython: " + o);
+              url: "./Phython/test.py",
+             
+            }).done(function() {
+             alert('finished python script');;
             });
         }
 
