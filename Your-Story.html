@@ -201,6 +201,22 @@ console.log("Checker: " + modelRef);
         // var x = localStorage.getItem('saved_model');
         // console.log('LOPO: ' + x);
 
+        function testPhy()
+        {
+            $.ajax({
+            type: "POST",
+            url: "./Phython/test.py",
+            data: { param: text}
+            }).done(function hello( o ) {
+            // do something
+            console.log("Data from Phython: " + o);
+            });
+        }
+
+
+        testPhy();
+
+
     </script>
 
 
