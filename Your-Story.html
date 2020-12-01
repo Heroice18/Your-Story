@@ -203,15 +203,20 @@ console.log("Checker: " + modelRef);
 
         function testPhy()
         {
-            $.ajax({
-              url: "./Phython/test.py",
-              type: "GET",
-              success: function(dataR){
-                  console.log("LK: " + dataR)
-              },
-              error: function(request, status, error) { 
-              console.log("Error: " + error) 
-              }
+            // $.ajax({
+            //   url: "./Phython/test.py",
+            //   type: "GET",
+            //   success: function(dataR){
+            //       console.log("LK: " + dataR)
+            //   },
+            //   error: function(request, status, error) { 
+            //   console.log("Error: " + error) 
+            //   }
+            // });
+
+            $.get('./Node/Basic.js', function(list) {
+                //$('#response').html(list); // show the list
+                console.log("WORKING");
             });
         }
 
@@ -220,9 +225,7 @@ console.log("Checker: " + modelRef);
 
 
     </script>
-<script type="module" src="./Node/Basic.js">
 
-</script>
 
 
 
