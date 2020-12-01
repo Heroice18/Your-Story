@@ -219,23 +219,33 @@ console.log("Checker: " + modelRef);
             //     console.log("WORKING");
             // });
 
-            $.ajax({
-        url: 'http://localhost:3000',
-        // dataType: "jsonp",
-        data: '{"data": "TEST"}',
-        type: 'POST',
-        jsonpCallback: 'callback', // this is not relevant to the POST anymore
-        success: function (data) {
-            var ret = jQuery.parseJSON(data);
-            $('#lblResponse').html(ret.msg);
-            console.log('Success: ')
-        },
-        error: function (xhr, status, error) {
-            console.log('Error: ' + error.message);
-            $('#lblResponse').html('Error connecting to the server.');
-        },
-    });
+        //     $.ajax({
+        // url: 'http://localhost:3000',
+        // // dataType: "jsonp",
+        // data: '{"data": "TEST"}',
+        // type: 'POST',
+        // jsonpCallback: 'callback', // this is not relevant to the POST anymore
+        // success: function (data) {
+        //     var ret = jQuery.parseJSON(data);
+        //     $('#lblResponse').html(ret.msg);
+        //     console.log('Success: ')
+        // },
+        // error: function (xhr, status, error) {
+        //     console.log('Error: ' + error.message);
+        //     $('#lblResponse').html('Error connecting to the server.');
+        // },
+    //});
 
+
+
+    $.ajax({
+      method: "GET", // since you are waiting for GET request on server
+      url: "http://127.0.0.1:3000", // you might have to provide full path to your endpoint starting with https://127.0.0.1/spotcrime
+      data: { Greetings: "Hello" } // data object can be deleted since you don't expect any parameters on server side
+    })
+    .done(function( msg ) {
+      alert( "Response data: " + msg );
+    });
 
 
         }
