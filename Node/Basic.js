@@ -1,7 +1,8 @@
 export function textPass()
 {
-const http = require('http');
+//const http = require('http');
 
+import http from 'http';
 const server = http.createServer(function getPred(req, res){
 
     res.setHeader('Content-type', 'application/json');
