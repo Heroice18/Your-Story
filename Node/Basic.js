@@ -1,3 +1,5 @@
+export function textPass()
+{
 const http = require('http');
 
 const server = http.createServer(function getPred(req, res){
@@ -20,5 +22,5 @@ server.listen(1234, function(){
     console.log("listening on port");
 
 })
-
-
+return "Working";
+}
