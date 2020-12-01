@@ -3,7 +3,7 @@ const {spawn} = require('child_process');
 const app = express()
 const port = 3000
 app.get('/', (req, res) => {
- 
+    res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
  const python = spawn('python', ['../Phython/test.py']);
