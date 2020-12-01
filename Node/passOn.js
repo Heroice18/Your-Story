@@ -1,4 +1,4 @@
-import {textPass} from './Node/Basic.js';
+import {textPass} from './Basic.js';
 
 let val = textPass();
 alert(val);
