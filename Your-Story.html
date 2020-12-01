@@ -203,21 +203,41 @@ console.log("Checker: " + modelRef);
 
         function testPhy()
         {
-            $.ajax({
-              url: "./Node/Tests.js",
-              type: "GET",
-              success: function(dataR){
-                  console.log("LK: " + dataR)
-              },
-              error: function(request, status, error) { 
-              console.log("Error: " + error) 
-              }
-            });
+            // $.ajax({
+            //   url: "./Phython/test.py",
+            //   type: "GET",
+            //   success: function(dataR){
+            //       console.log("LK: " + dataR)
+            //   },
+            //   error: function(request, status, error) { 
+            //   console.log("Error: " + error) 
+            //   }
+            // });
 
-            $.get('./Node/Basic.js', function(list) {
-                //$('#response').html(list); // show the list
-                console.log("WORKING");
-            });
+            // $.get('./Node/Basic.js', function(list) {
+            //     //$('#response').html(list); // show the list
+            //     console.log("WORKING");
+            // });
+
+            $.ajax({
+        url: 'http://localhost:3000',
+        // dataType: "jsonp",
+        data: '{"data": "TEST"}',
+        type: 'POST',
+        jsonpCallback: 'callback', // this is not relevant to the POST anymore
+        success: function (data) {
+            var ret = jQuery.parseJSON(data);
+            $('#lblResponse').html(ret.msg);
+            console.log('Success: ')
+        },
+        error: function (xhr, status, error) {
+            console.log('Error: ' + error.message);
+            $('#lblResponse').html('Error connecting to the server.');
+        },
+    });
+
+
+
         }
 
 
