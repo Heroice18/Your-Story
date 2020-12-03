@@ -36,7 +36,7 @@ $(document).ready(function() {
                               
                     if(chatService.sendMessage(response) == true)
                     {
-                       // chatService.onMessageReceived();
+                        chatService.onMessageReceived();
                     }   
                });
                console.log("After function: " + pass);
