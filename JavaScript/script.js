@@ -26,22 +26,22 @@ $(document).ready(function() {
                testPhy(function(output){
                     console.log("testPy output: " + output);
                     pass = output;
-                    
+                  
+                    console.log("Hop on by: " + typeof(pass));
+                    console.log("Juming: " + pass);
+                    let response = {
+                        username: "AI",
+                        message: pass
+                    }
+                              
+                    if(chatService.sendMessage(response) == true)
+                    {
+                        chatService.onMessageReceived();
+                    }   
                });
                console.log("After function: " + pass);
               /// var passing = testPhy().toS
-               console.log("Hop on by: " + typeof(pass));
-               console.log("Juming: " + pass);
-               let response = {
-                username: "AI",
-                message: pass
-            }
-            
-        
-            if(chatService.sendMessage(response) == true)
-            {
-                chatService.onMessageReceived();
-            }       
+                   
                
     	}
            console.log("6");
