@@ -94,6 +94,7 @@ sendMessage: function(message){
     // console.log("MEssage is: " + message.message);
     // savedAIContent = savedAIContent + message.message  + " ";
     messageArray.push(message);
+    messageArray.push(testPhy());
     return true;
 },
 onMessageReceived: function() {
@@ -107,6 +108,8 @@ onMessageReceived: function() {
 
         let messageList;
         if (value.username !== "User") {
+
+
             messageList = `
 <div class="received-chats old-chats">
 <div class="received-chats-img">
@@ -133,10 +136,11 @@ onMessageReceived: function() {
                 console.log("message from: " + value.username);
                 console.log("Message from AI: " + value.message);
                 savedAIContent +=  value.message  + " \n";
-    console.log("CHECKING: " +  savedAIContent);
+                console.log("CHECKING: " +  savedAIContent);
             }
     
-        } else {
+        }
+        else {
             console.log("Message from USER: " + value.message);
             messageList = `
 <div class="outgoing-chats ongoing old-chats">
