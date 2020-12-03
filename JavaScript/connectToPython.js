@@ -1,5 +1,5 @@
 function testPhy()
-        {
+{
             var totalReply;
             // $.ajax({
             //   url: "./Phython/test.py",
@@ -36,5 +36,5 @@ function testPhy()
         },
     });
 
-    
-        }
+    return "NULL";
+}
