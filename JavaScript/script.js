@@ -20,6 +20,7 @@ $(document).ready(function() {
         console.log("4");
                chatService.onMessageReceived();
                console.log("5");
+               testPhy();
     	   }
            console.log("6");
        $('#message-form').trigger('reset');
