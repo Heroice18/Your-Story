@@ -22,8 +22,10 @@ $(document).ready(function() {
                chatService.onMessageReceived();
                console.log("5");
         
-               var pass = testPhy();
+               var pass = String(testPhy());
+              /// var passing = testPhy().toS
                console.log("Hop on by: " + typeof(pass));
+               console.log("Juming: " + pass);
                let response = {
                 username: "AI",
                 message: pass
