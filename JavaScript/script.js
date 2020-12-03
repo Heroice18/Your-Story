@@ -23,7 +23,7 @@ $(document).ready(function() {
                console.log("5");
         
                var pass = testPhy();
-               console.log("Hop on by: " + pass);
+               console.log("Hop on by: " + typeof(pass));
                let response = {
                 username: "AI",
                 message: pass
