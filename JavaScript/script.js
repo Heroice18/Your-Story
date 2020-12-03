@@ -21,10 +21,11 @@ $(document).ready(function() {
                chatService.onMessageReceived();
                console.log("5");
         
-               
+               var pass = testPhy();
+               console.log("Hop on by: " + pass);
                let response = {
                 username: "AI",
-                message: testPhy()
+                message: pass
             }
             
         
