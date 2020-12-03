@@ -220,10 +220,10 @@ console.log("Checker: " + modelRef);
             // });
 
             $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/http://127.0.0.1:3000",
+        url: "http://localhost:3000",
         // dataType: "jsonp",
         data: '{"data": "TEST"}',
-        type: 'POST',
+        type: 'Get',
         jsonpCallback: 'callback', // this is not relevant to the POST anymore
         success: function (data) {
             var ret = jQuery.parseJSON(data);
