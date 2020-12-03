@@ -9,6 +9,7 @@ $(document).ready(function() {
     e.preventDefault();
     if (profanityCheck() == false) {
        let message = $('#input-text').val();
+       console.log("Input is of: " + typeof(message));
        let text = {
            username: "User",
            message
