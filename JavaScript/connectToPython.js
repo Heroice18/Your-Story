@@ -27,7 +27,7 @@ function testPhy()
            totalReply = data;
             console.log('Success: ' + totalReply);
          //   chatService.sendMessage(totalReply);
-         console.log("checking reply2: " + totalReply);
+         console.log("checking reply2: " + typeof(totalReply));
          return totalReply;
         },
         error: function (xhr, status, error) {
