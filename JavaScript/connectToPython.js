@@ -28,7 +28,7 @@ function testPhy()
             console.log('Success: ' + totalReply);
          //   chatService.sendMessage(totalReply);
          console.log("checking reply2: " + typeof(totalReply));
-         return totalReply;
+        // return totalReply;
         },
         error: function (xhr, status, error) {
             console.log('Error: ' + error.message);
@@ -36,5 +36,6 @@ function testPhy()
         },
     });
 
-    return "NULL";
+    console.log("reply before return: " + totalReply);
+    return totalReply;
 }
