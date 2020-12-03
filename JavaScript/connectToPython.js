@@ -34,4 +34,7 @@ function testPhy()
             
         },
     });
+
+    console.log("checking reply: " + totalReply);
+    return totalReply;
         }

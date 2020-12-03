@@ -21,6 +21,7 @@ $(document).ready(function() {
                chatService.onMessageReceived();
                console.log("5");
         
+               
                let response = {
                 username: "AI",
                 message: testPhy()
