@@ -19,7 +19,7 @@ $(document).ready(function() {
        console.log("3");
        if (chatService.sendMessage(text) == true) {
         console.log("4");
-               chatService.onMessageReceived();
+            //   chatService.onMessageReceived();
                console.log("5");
         
                var pass;
