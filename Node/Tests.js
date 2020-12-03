@@ -2,6 +2,19 @@ const express = require('express')
 const {spawn} = require('child_process');
 const app = express()
 const port = 3000
+const python2 = spawn('python', ['../Phython/text_generation.py']);
+
+python2.stdout.on('data', (data) => {
+console.log("OUT: " + data);
+//console.log('OUT2: ${data');
+});
+
+python2.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`);
+  });
+  
+
+
 app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;

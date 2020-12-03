@@ -1,40 +1,42 @@
 import tensorflow as tf
-
 import numpy as np
-import os
+#from keras.models import load_model
+#from numpy import loadtxt 
+import os 
 import time
 
 
 # Import the dataset
 filename2 = "armageddon.txt"
-raw_text2 = open(filename2, 'r', encoding='utf-8').read()
+raw_text2 = open('../Phython/armageddon.txt', 'r', encoding='utf-8').read()
 raw_text2 = raw_text2.lower()
 
 # Read, then decode for py2 compat.
-SciFitext = open(filename2, 'rb').read().decode(encoding='utf-8')
+#SciFitext = open(filename2, 'rb').read().decode(encoding='utf-8')
 # length of text is the number of characters in it
-print('Length of text: {} characters'.format(len(SciFitext)))
+#print('Length of text: {} characters'.format(len(SciFitext)))
 
+model = tf.keras.models.load_model('../Phython/my_model.h5')
 
 # Read the data
 # Read, then decode for py2 compat.
-text = open(filename2, 'rb').read().decode(encoding='utf-8')
+text = open('../Phython/armageddon.txt', 'rb').read().decode(encoding='utf-8')
 # length of text is the number of characters in it
-print('Length of text: {} characters'.format(len(text)))
+#print('Length of text: {} characters'.format(len(text)))
 
 # Take a look at the first 250 characters in text
-print(text[:250])
+#print(text[:250])
 
 # The unique characters in the file
 vocab = sorted(set(text))
-print('\n{} unique characters'.format(len(vocab)))
+#print('\n{} unique characters'.format(len(vocab)))
 
 
 # Vectorize the text
 # Creating a mapping from unique characters to indices
 char2idx = {u:i for i, u in enumerate(vocab)}
 idx2char = np.array(vocab)
-
+"""
 text_as_int = np.array([char2idx[c] for c in text])
 
 print('{')
@@ -45,7 +47,7 @@ print('  ...\n}')
 # Show how the first 13 characters from the text are mapped to integers
 print('{} ---- characters mapped to int ---- > {}'.format(repr(text[:13]), text_as_int[:13]))
 
-
+ 
 # Create training examples and targets
 # The maximum length sentence you want for a single input in characters
 seq_length = 100
@@ -171,7 +173,7 @@ model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
 model.build(tf.TensorShape([1, None]))
 model.summary()
 #model.save('my_model.h5')
-#model.save('saved_model/my_model')
+#model.save('saved_model/my_model')"""
 
 def generate_text(model, start_string):
     # Evaluation step (generating text using the learned model)
