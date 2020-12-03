@@ -226,13 +226,12 @@ console.log("Checker: " + modelRef);
         type: 'Get',
         jsonpCallback: 'callback', // this is not relevant to the POST anymore
         success: function (data) {
-            var ret = jQuery.parseJSON(data);
-            $('#lblResponse').html(ret.msg);
+           
             console.log('Success: ')
         },
         error: function (xhr, status, error) {
             console.log('Error: ' + error.message);
-            $('#lblResponse').html('Error connecting to the server.');
+           
         },
     });
 
