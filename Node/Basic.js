@@ -24,7 +24,7 @@ server.listen(1234, function(){
     console.log("listening on port");
 
     const spawn = require("child_process").spawn;
-    const pythonProcess = spawn('python',["./Python/test.py"]);
+    const pythonProcess = spawn('python',["./Python/text_generation.py"]);
 
     // let dataObject = {"id":1234, "name": "BOB", "email":"ASASAS"};
     // let data = JSON.stringify(dataObject);
