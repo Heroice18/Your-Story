@@ -1,5 +1,6 @@
 function testPhy()
         {
+            var totalReply;
             // $.ajax({
             //   url: "./Phython/test.py",
             //   type: "GET",
@@ -23,8 +24,10 @@ function testPhy()
         type: 'Get',
         jsonpCallback: 'callback', // this is not relevant to the POST anymore
         success: function (data) {
-           
-            console.log('Success: ' + data);
+           totalReply = data;
+            console.log('Success: ' + totalReply);
+            chatService.sendMessage(totalReply);
+
         },
         error: function (xhr, status, error) {
             console.log('Error: ' + error.message);
