@@ -7,7 +7,7 @@ $(document).ready(function() {
     
         console.log("1");
     e.preventDefault();
-    if (profanityCheck() == true) {
+    if (profanityCheck() == false) {
        let message = $('#input-text').val();
        let text = {
            username: "User",
@@ -56,12 +56,12 @@ function profanityCheck(){
     if(doesInclude == true)
         {
             alert("Please do not write profanity into the bar.");
-            return false;
+            return true;
             // delete message
         }
     else
         {
-            return true;
+            return false;
             //alert("NO CURSES");
             //All good
         }

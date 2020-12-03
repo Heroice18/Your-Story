@@ -134,7 +134,7 @@ console.log("Checker: " + modelRef);
     <script src="JavaScript/script.js"></script>
     <script src="JavaScript/interfaceFunctions.js"></script>
     <script src="JavaScript/openCloseFiles.js"></script>
-    <script>
+    <script src="JavaScript/connectToPython.js">
         
 
 //         const uploadJSONInput = document.getElementById('jsonModel');
@@ -201,39 +201,39 @@ console.log("Checker: " + modelRef);
         // var x = localStorage.getItem('saved_model');
         // console.log('LOPO: ' + x);
 
-        function testPhy()
-        {
-            // $.ajax({
-            //   url: "./Phython/test.py",
-            //   type: "GET",
-            //   success: function(dataR){
-            //       console.log("LK: " + dataR)
-            //   },
-            //   error: function(request, status, error) { 
-            //   console.log("Error: " + error) 
-            //   }
-            // });
+    //     function testPhy()
+    //     {
+    //         // $.ajax({
+    //         //   url: "./Phython/test.py",
+    //         //   type: "GET",
+    //         //   success: function(dataR){
+    //         //       console.log("LK: " + dataR)
+    //         //   },
+    //         //   error: function(request, status, error) { 
+    //         //   console.log("Error: " + error) 
+    //         //   }
+    //         // });
 
-            // $.get('./Node/Basic.js', function(list) {
-            //     //$('#response').html(list); // show the list
-            //     console.log("WORKING");
-            // });
+    //         // $.get('./Node/Basic.js', function(list) {
+    //         //     //$('#response').html(list); // show the list
+    //         //     console.log("WORKING");
+    //         // });
 
-            $.ajax({
-        url: "http://localhost:3000",
-        // dataType: "jsonp",
-        data: '{"data": "TEST"}',
-        type: 'Get',
-        jsonpCallback: 'callback', // this is not relevant to the POST anymore
-        success: function (data) {
+    //         $.ajax({
+    //     url: "http://localhost:3000",
+    //     // dataType: "jsonp",
+    //     data: '{"data": "TEST"}',
+    //     type: 'Get',
+    //     jsonpCallback: 'callback', // this is not relevant to the POST anymore
+    //     success: function (data) {
            
-            console.log('Success: ' + data);
-        },
-        error: function (xhr, status, error) {
-            console.log('Error: ' + error.message);
+    //         console.log('Success: ' + data);
+    //     },
+    //     error: function (xhr, status, error) {
+    //         console.log('Error: ' + error.message);
             
-        },
-    });
+    //     },
+    // });
 
 
 
@@ -247,10 +247,10 @@ console.log("Checker: " + modelRef);
     // });
 
 
-        }
+       // }
 
 
-        testPhy();
+      //  testPhy();
 
 
     </script>
