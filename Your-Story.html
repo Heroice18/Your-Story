@@ -165,34 +165,34 @@ console.log("Checker: " + modelRef);
 
 
 
-        async function tensorFlow() {
+        // async function tensorFlow() {
 
 
 
-                //let data = data.json
+        //         //let data = data.json
 
-                // let data = require('./AI-Model/model.json');
-                let response = await fetch("./AI-Model/model.json")
+        //         // let data = require('./AI-Model/model.json');
+        //         let response = await fetch("./AI-Model/model.json")
 
-                console.log(response);
-                //localStorage.setItem('saved_model2', JSON.stringify(response))
-                var data = await response.json();
-                // return response.json();
-               // console.log("DATA: " + JSON.stringify(data));
-                localStorage.setItem('saved_model', JSON.stringify(data));
-                const modelLocal = localStorage.getItem('saved_model');
-                //console.log('Local model: ' + modelLocal);
-                const JSONmod = JSON.parse(modelLocal);
+        //         console.log(response);
+        //         //localStorage.setItem('saved_model2', JSON.stringify(response))
+        //         var data = await response.json();
+        //         // return response.json();
+        //        // console.log("DATA: " + JSON.stringify(data));
+        //         localStorage.setItem('saved_model', JSON.stringify(data));
+        //         const modelLocal = localStorage.getItem('saved_model');
+        //         //console.log('Local model: ' + modelLocal);
+        //         const JSONmod = JSON.parse(modelLocal);
 
-                const model = await tf.loadLayersModel('./AI-Model/model.json');
+        //         const model = await tf.loadLayersModel('./AI-Model/model.json');
 
-                // const t = tf.linspace(1, 0, 256);
-                // const test = model.predict(t);
-                // console.log("Checking data: " + test);
-        }
+        //         // const t = tf.linspace(1, 0, 256);
+        //         // const test = model.predict(t);
+        //         // console.log("Checking data: " + test);
+        // }
 
 
-        tensorFlow();
+        // tensorFlow();
 
         //const model = tensorFlow();
 
