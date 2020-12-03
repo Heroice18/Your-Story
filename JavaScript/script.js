@@ -20,8 +20,19 @@ $(document).ready(function() {
         console.log("4");
                chatService.onMessageReceived();
                console.log("5");
+        
+               let response = {
+                username: "AI",
+                message: testPhy()
+            }
+            
+        
+            if(chatService.sendMessage(response) == true)
+            {
+                chatService.onMessageReceived();
+            }       
                
-    	   }
+    	}
            console.log("6");
        $('#message-form').trigger('reset');
        console.log("7");

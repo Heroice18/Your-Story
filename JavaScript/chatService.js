@@ -94,7 +94,7 @@ sendMessage: function(message){
     // console.log("MEssage is: " + message.message);
     // savedAIContent = savedAIContent + message.message  + " ";
     messageArray.push(message);
-    messageArray.push(testPhy());
+    //messageArray.push(testPhy());
     return true;
 },
 onMessageReceived: function() {
