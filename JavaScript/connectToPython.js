@@ -1,23 +1,8 @@
-function testPhy()
+function testPhy(passingData)
 {
             var totalReply;
-            // $.ajax({
-            //   url: "./Phython/test.py",
-            //   type: "GET",
-            //   success: function(dataR){
-            //       console.log("LK: " + dataR)
-            //   },
-            //   error: function(request, status, error) { 
-            //   console.log("Error: " + error) 
-            //   }
-            // });
 
-            // $.get('./Node/Basic.js', function(list) {
-            //     //$('#response').html(list); // show the list
-            //     console.log("WORKING");
-            // });
-
-            $.ajax({
+        $.ajax({
         url: "http://localhost:3000",
         // dataType: "jsonp",
         data: '{"data": "TEST"}',
@@ -29,6 +14,7 @@ function testPhy()
          //   chatService.sendMessage(totalReply);
          console.log("checking reply2: " + typeof(totalReply));
         // return totalReply;
+        passingData(totalReply);
         },
         error: function (xhr, status, error) {
             console.log('Error: ' + error.message);
@@ -36,6 +22,16 @@ function testPhy()
         },
     });
 
-    console.log("reply before return: " + totalReply);
-    return totalReply;
+   // console.log("reply before return: " + totalReply);
+   // return totalReply;
 }
+
+// function testPhy()
+// {
+
+//     passPhy(function(data){
+//         console.log("NEW DATA: " + data);
+        
+//     });
+
+// }

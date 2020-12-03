@@ -1,3 +1,5 @@
+const { Console } = require("console");
+
 // source code:  https://github.com/cometchat-pro-tutorials/jquery-chat-app
 $(document).ready(function() {
    chatService.fetchMessages();
@@ -22,7 +24,13 @@ $(document).ready(function() {
                chatService.onMessageReceived();
                console.log("5");
         
-               var pass = String(testPhy());
+               var pass;
+               testPhy(function(output){
+                    console.log("testPy output: " + output);
+                    pass = output;
+                    
+               });
+               console.log("After function: " + pass);
               /// var passing = testPhy().toS
                console.log("Hop on by: " + typeof(pass));
                console.log("Juming: " + pass);
