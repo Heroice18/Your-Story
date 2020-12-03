@@ -32,7 +32,7 @@ $(document).ready(function() {
                     let response = {
                         username: "AI",
                         message: pass
-                    }
+                    } 
                               
                     if(chatService.sendMessage(response) == true)
                     {
