@@ -1,5 +1,3 @@
-const { Console } = require("console");
-
 // source code:  https://github.com/cometchat-pro-tutorials/jquery-chat-app
 $(document).ready(function() {
    chatService.fetchMessages();
