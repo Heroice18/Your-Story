@@ -152,6 +152,6 @@ function newStory()
 {
     //localStorage.clear();
     console.log("THIS WORKED");
-    location.href ='Your-Story.html';
+    location.href ='./Your-Story.html';
 }
 
