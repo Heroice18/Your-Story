@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
- console.log("REQUEST: " + req);
+ console.log("REQUEST: " + req.toString());
  req.on('data', function (chunk) {
   console.log('GOT DATA! ' + chunk);
  });
