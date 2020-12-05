@@ -8,7 +8,7 @@ import time
 
 # Import the dataset
 filename2 = "armageddon.txt"
-raw_text2 = open('../Phython/armageddon.txt', 'r', encoding='utf-8').read()
+raw_text2 = open('../Phython/scifi.txt', 'r', encoding='utf-8').read()
 raw_text2 = raw_text2.lower()
 
 # Read, then decode for py2 compat.
