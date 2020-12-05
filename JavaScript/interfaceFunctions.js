@@ -150,8 +150,8 @@ function setInfo(form) {
 
 function newStory()
 {
-    localStorage.clear();
+    //localStorage.clear();
     console.log("THIS WORKED");
-    //location.href ='Prompt-Selection.html';
+    location.href ='Your-Story.html';
 }
 
