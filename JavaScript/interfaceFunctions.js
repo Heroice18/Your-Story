@@ -157,7 +157,7 @@ function newStory()
     console.log("THIS WORKED");
     if(setInfo() == true)
     {
-        location.href ='./Your-Story.html';
+        window.location.href ='./Your-Story.html';
     }
     
 }
