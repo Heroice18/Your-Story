@@ -19,7 +19,7 @@ function testPhy(passingData)
         $.ajax({
             type: 'POST',
             url: "http://localhost:3000",
-            data: {path: pythonPath},
+            data: '{"data": "TEST"}',
             success: function(data) {
                 //show content
                 console.log('Success in sending data! ' + data);
