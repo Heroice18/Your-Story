@@ -15,6 +15,22 @@ function testPhy(passingData)
             {
               pythonPath = '../Phython/Sci_Fi_text.py';
             }
+
+        $.ajax({
+            type: 'POST',
+            url: "http://localhost:3000",
+            data: {path: pythonPath},
+            success: function(data) {
+                //show content
+                alert('Success in sending data! ' + data);
+            },
+            error: function(jqXHR, textStatus, err) {
+                //show error message
+                alert('text status '+textStatus+', err '+err)
+            }
+
+        });
+
         $.ajax({
         url: "http://localhost:3000",
         // dataType: "jsonp",

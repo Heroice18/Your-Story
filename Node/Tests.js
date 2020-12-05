@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
+ console.log("REQUEST: " + req);
+ req.on('data', function (chunk) {
+  console.log('GOT DATA! ' + chunk);
+ });
  const python = spawn('python', ['../Phython/text_generation.py']);
  // collect data from script
  python.stdout.on('data', function (data) {
