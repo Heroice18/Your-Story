@@ -1,7 +1,7 @@
 //This function returns the user to the Home page
 function returnHome()
 {
-    window.location.href = "./Title-Page.html";
+    window.location.href = "./index.html";
 }
 
 

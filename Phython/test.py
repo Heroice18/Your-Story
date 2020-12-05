@@ -191,7 +191,7 @@ def generate_text(model, start_string):
     # Low temperature results in more predictable text.
     # Higher temperature results in more surprising text.
     # Experiment to find the best setting.
-    temperature = 0.001
+    temperature = 0.8
 
     # Here batch size == 1
     model.reset_states()
