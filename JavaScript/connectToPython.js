@@ -22,11 +22,11 @@ function testPhy(passingData)
             data: {path: pythonPath},
             success: function(data) {
                 //show content
-                alert('Success in sending data! ' + data);
+                console.log('Success in sending data! ' + data);
             },
             error: function(jqXHR, textStatus, err) {
                 //show error message
-                alert('text status '+textStatus+', err '+err)
+                console.log('text status '+textStatus+', err '+err)
             }
 
         });
