@@ -2,13 +2,15 @@
 <html>
 	<link rel="stylesheet" href="CSS/Story-Info.css">
 	<script src="JavaScript/interfaceFunctions.js"></script>
-    <body>
+    <body onload="grabGenre()">
 		<img src="./Images/Logo.png" onclick="returnHome()"class = "logo">
 <div>
 	<div class = "div2">
 		<h1>Story Info</h1>
 	</div>
 	<form name = "info" method = "post" action = "Your-Story.html" onsubmit = "return setInfo(this);">
+	  <label>Current Genre Selection</label><br>
+	  <input type="text" name="genreTitle" id="genreTitle" class="genreTitle" readonly><br>
 	  <label for="characterName">Character Name</label><br>
 	  <input type="text" name="characterName" id="characterName"  class = "characterName" placeholder="Character Name" value><br>
 	  <label for="age">Character Age</label><br>

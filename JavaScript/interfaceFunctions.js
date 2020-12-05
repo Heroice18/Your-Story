@@ -125,10 +125,20 @@ else
 
 }
 
+function grabGenre()
+{
+    var temp = window.localStorage.getItem("genre");
+    console.log("CHECK: " + temp);
+    document.getElementById("genreTitle").value = temp;
+    
+}
+
 function setInfo(form) {
 	window.localStorage.setItem("characterName", form.characterName.value);
-	window.localStorage.setItem("age", form.age.value);
-	window.localStorage.setItem("gender", form.gender.value);
+    window.localStorage.setItem("age", form.age.value);
+    window.localStorage.setItem("genre", form.genreTitle.value);
+    window.localStorage.setItem("gender", form.gender.value);
+
 	
 	var name = document.forms["info"]["characterName"].value;
 	var age = document.forms["info"]["age"].value;
