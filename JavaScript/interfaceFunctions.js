@@ -133,11 +133,11 @@ function grabGenre()
     
 }
 
-function setInfo(form) {
-	window.localStorage.setItem("characterName", form.characterName.value);
-    window.localStorage.setItem("age", form.age.value);
-    window.localStorage.setItem("genre", form.genreTitle.value);
-    window.localStorage.setItem("gender", form.gender.value);
+function setInfo() {
+	window.localStorage.setItem("characterName", document.getElementById("characterName").value);
+    window.localStorage.setItem("age", document.getElementById("age").value);
+    window.localStorage.setItem("genre", document.getElementById("genreTitle").value);
+    window.localStorage.setItem("gender", document.getElementById("gender").value);
 
 	
 	var name = document.forms["info"]["characterName"].value;
@@ -145,13 +145,20 @@ function setInfo(form) {
 	if (name == "" || age == "") {
 	    alert("Please fill in all fields.");
 	    return false;
-	}
+    }
+    else{
+        return true;
+    }
 }
 
 function newStory()
 {
     //localStorage.clear();
     console.log("THIS WORKED");
-    location.href ='./Your-Story.html';
+    if(setInfo() == true)
+    {
+        location.href ='./Your-Story.html';
+    }
+    
 }
 
