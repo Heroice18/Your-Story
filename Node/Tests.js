@@ -5,6 +5,8 @@ const port = 3000
 const python2 = spawn('python', ['../Phython/text_generation.py']);
 
 const util = require('util');
+const bodyParser = require('body-parser');
+
 
 python2.stdout.on('data', (data) => {
 console.log("OUT: " + data);
@@ -15,10 +17,13 @@ python2.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
   });
   
-app.post('/testData', function(req, res){
+  app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get('/testData', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', "*");
  // console.log("POSTING RES:  " + util.inspect(req, false, null, true));
   console.log("POSTING REQ:  " + req.body.filePath);
+  console.log("POSTING REQ:  " + res.body.filePath);
 
 });
 
@@ -26,7 +31,7 @@ app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
- console.log("REQUEST: " + req.body);
+ console.log("REQUEST: " + req.body.name);
  req.on('data', function (chunk) {
   console.log('GOT DATA! ' + chunk);
  });

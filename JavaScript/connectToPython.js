@@ -36,7 +36,7 @@ function testPhy(passingData)
         $.ajax({
         url: "http://localhost:3000",
         // dataType: "jsonp",
-        data: '{"data": "TEST"}',
+        data: {data: "TEST"},
         type: 'Get',
         jsonpCallback: 'callback', // this is not relevant to the POST anymore
         success: function (data) {
