@@ -219,4 +219,4 @@ def generate_text(model, start_string):
     return (start_string + ''.join(text_generated))
 details = sy.argv[0]
 print(details)
-print(generate_text(model, start_string=u" "))
+#print(generate_text(model, start_string=u" "))

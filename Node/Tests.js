@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
   console.log('GOT DATA! ' + chunk);
  });
  console.log("JUST TESTING: " + aiPath);
- const python = spawn('python', [aiPath]);
+ const python = spawn('python', [aiPath, userData]);
  // collect data from script
  python.stdout.on('data', function (data) {
   console.log('Pipe data from python script ...');
