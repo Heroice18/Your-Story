@@ -69,7 +69,8 @@ function testPhy(passingData)
 
 function getInput()
 {
-  var inputUser = "Trying something";
+  var inputUser = document.getElementById("input-text").value;
+  
 
   return inputUser;
 }

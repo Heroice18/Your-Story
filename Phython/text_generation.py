@@ -11,6 +11,7 @@ import sys as sy
 import os 
 import time
 
+inputUser = sy.argv[1]
 
 # Import the dataset
 filename2 = "armageddon.txt"
@@ -217,6 +218,4 @@ def generate_text(model, start_string):
         text_generated.append(idx2char[predicted_id])
 
     return (start_string + ''.join(text_generated))
-details = sy.argv[0]
-print(details)
-#print(generate_text(model, start_string=u" "))
+print(generate_text(model, start_string=u" "))
