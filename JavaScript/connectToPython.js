@@ -16,6 +16,8 @@ function testPhy(passingData)
               pythonPath = '../Phython/Sci_Fi_text.py';
             }
 
+            $.post('/testData', {filePath: 'Trying'});
+
         $.ajax({
             type: 'POST',
             url: "http://localhost:3000",

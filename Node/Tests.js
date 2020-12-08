@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 const python2 = spawn('python', ['../Phython/text_generation.py']);
 
-
+const util = require('util');
 
 python2.stdout.on('data', (data) => {
 console.log("OUT: " + data);
@@ -15,10 +15,10 @@ python2.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
   });
   
-app.post('/', function(req, res){
+app.post('/testData', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', "*");
-  console.log("POSTING RES:  " + res);
-  console.log("POSTING REQ:  " + req);
+ // console.log("POSTING RES:  " + util.inspect(req, false, null, true));
+  console.log("POSTING REQ:  " + req.body.filePath);
 
 });
 
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
- console.log("REQUEST: " + req);
+ console.log("REQUEST: " + req.body);
  req.on('data', function (chunk) {
   console.log('GOT DATA! ' + chunk);
  });
