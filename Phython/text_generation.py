@@ -5,6 +5,7 @@ We don;t use this file
 '''
 import tensorflow as tf
 import numpy as np
+import sys as sy
 #from keras.models import load_model
 #from numpy import loadtxt 
 import os 
@@ -216,4 +217,6 @@ def generate_text(model, start_string):
         text_generated.append(idx2char[predicted_id])
 
     return (start_string + ''.join(text_generated))
+details = sy.argv[0]
+print(details)
 print(generate_text(model, start_string=u" "))

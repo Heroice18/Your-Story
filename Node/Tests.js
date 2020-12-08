@@ -20,6 +20,7 @@ python2.stderr.on('data', (data) => {
   app.use(bodyParser.urlencoded({ extended: false }));
   
 var aiPath = "";
+var userData = "";
 
 app.post('/', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', "*");
@@ -28,9 +29,10 @@ app.post('/', function(req, res){
   var tempPath = JSON.stringify(req.body);
   var path = JSON.parse(tempPath);
   var pathFile = path.path;
+  userData = path.userInput;
 
   aiPath = pathFile;
-  console.log("HERE ARE THE DATA: " + path +" " + pathFile);
+  console.log("HERE ARE THE DATA: " + userData +" " + pathFile);
 
   console.log("POSTING REQ:  " + JSON.stringify(res.body));
 
