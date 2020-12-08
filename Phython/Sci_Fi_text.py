@@ -216,4 +216,4 @@ def generate_text(model, start_string):
         text_generated.append(idx2char[predicted_id])
 
     return (start_string + ''.join(text_generated))
-print("SCIFI")
+print(generate_text(model, start_string=u" "))
