@@ -2,7 +2,7 @@ function testPhy(passingData)
 {
             var totalReply;
             var modelType = localStorage.getItem("genre");
-            var pythonPath = '../Phython/text_generation.py';
+            var pythonPath = '../Phython/boby.py';
             if(modelType == "Fantasy")
             {
               pythonPath = '../Phython/Fantasy_text.py';

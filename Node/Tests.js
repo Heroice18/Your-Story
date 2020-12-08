@@ -17,13 +17,24 @@ python2.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
   });
   
-  app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.get('/testData', function(req, res){
+  app.use(bodyParser.urlencoded({ extended: false }));
+  
+var aiPath = "";
+
+app.post('/', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', "*");
  // console.log("POSTING RES:  " + util.inspect(req, false, null, true));
-  console.log("POSTING REQ:  " + req.body.filePath);
-  console.log("POSTING REQ:  " + res.body.filePath);
+  console.log("POSTING REQ:  " + JSON.stringify(req.body));
+  var tempPath = JSON.stringify(req.body);
+  var path = JSON.parse(tempPath);
+  var pathFile = path.path;
+
+  aiPath = pathFile;
+  console.log("HERE ARE THE DATA: " + path +" " + pathFile);
+
+  console.log("POSTING REQ:  " + JSON.stringify(res.body));
+
+
 
 });
 
@@ -31,11 +42,15 @@ app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
  var dataToSend;
  // spawn new child process to call the python script
- console.log("REQUEST: " + req.body.name);
+ 
+ console.log("REQUEST: " + JSON.stringify(req.body));
+ console.log("RES: " + JSON.stringify(res.body));
+
  req.on('data', function (chunk) {
   console.log('GOT DATA! ' + chunk);
  });
- const python = spawn('python', ['../Phython/text_generation.py']);
+ console.log("JUST TESTING: " + aiPath);
+ const python = spawn('python', [aiPath]);
  // collect data from script
  python.stdout.on('data', function (data) {
   console.log('Pipe data from python script ...');
