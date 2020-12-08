@@ -15,7 +15,12 @@ python2.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
   });
   
+app.post('/', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', "*");
+  console.log("POSTING RES:  " + res);
+  console.log("POSTING REQ:  " + req);
 
+});
 
 app.get('/', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
