@@ -155,6 +155,7 @@ function newStory()
 {
     //localStorage.clear();
     console.log("THIS WORKED");
+    localStorage.removeItem("content");
     if(setInfo() == true)
     {
         window.location.href ='./Your-Story.html';
