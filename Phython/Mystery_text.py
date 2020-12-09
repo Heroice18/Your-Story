@@ -21,11 +21,11 @@ raw_text2 = raw_text2.lower()
 # length of text is the number of characters in it
 #print('Length of text: {} characters'.format(len(SciFitext)))
 
-model = tf.keras.models.load_model('../Phython/my_model.h5')
+model = tf.keras.models.load_model('../Phython/mystery_model.h5')
 
 # Read the data
 # Read, then decode for py2 compat.
-text = open('../Phython/armageddon.txt', 'rb').read().decode(encoding='utf-8')
+text = open('../Phython/mystery.txt', 'rb').read().decode(encoding='utf-8')
 # length of text is the number of characters in it
 #print('Length of text: {} characters'.format(len(text)))
 
