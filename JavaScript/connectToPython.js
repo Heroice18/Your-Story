@@ -5,7 +5,7 @@ function testPhy(passingData)
             console.log("MODEL IS: " + modelType);
             var pythonPath = '../Phython/text_generation.py';
             console.log("Path IS: " + pythonPath);
-            if(modelType === "Fantasy")
+            if(modelType == "Fantasy")
             {
               pythonPath = '../Phython/Fantasy_text.py';
             }
