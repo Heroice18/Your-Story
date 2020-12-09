@@ -4,7 +4,7 @@ function testPhy(passingData)
             var modelType = String(localStorage.getItem("genre"));
             console.log("MODEL IS: " + modelType);
             var pythonPath = '../Phython/text_generation.py';
-            console.log("Path IS: " + pythonPath);
+            
             if(modelType == "Fantasy")
             {
               pythonPath = '../Phython/Fantasy_text.py';
@@ -17,7 +17,7 @@ function testPhy(passingData)
             {
               pythonPath = '../Phython/Sci_Fi_text.py';
             }
-
+            console.log("Path IS: " + pythonPath);
             $.post('/testData', {filePath: 'Trying'});
 
         $.ajax({
