@@ -11,7 +11,7 @@ import sys as sy
 import os 
 import time
 
-inputUser = sy.argv[1]
+#inputUser = sy.argv[1]
 
 # Import the dataset
 filename2 = "armageddon.txt"
