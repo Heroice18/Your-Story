@@ -1,7 +1,8 @@
 function testPhy(passingData)
 {
             var totalReply;
-            var modelType = String(localStorage.getItem("genre"));
+            var modelType = localStorage.getItem("genre");
+            modelType = modelType.toString();
             console.log("MODEL IS: " + modelType);
             var pythonPath = '../Phython/text_generation.py';
             
