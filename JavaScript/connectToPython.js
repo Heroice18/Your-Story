@@ -6,16 +6,19 @@ function testPhy(passingData)
             console.log("MODEL IS: " + modelType);
             var pythonPath = '../Phython/text_generation.py';
             
-            if(modelType == "Fantasy")
+            if(modelType.includes("Fantasy"))
             {
+              console.log("WITHIN FANTASY");
               pythonPath = '../Phython/Fantasy_text.py';
             }
-            else if(modelType == "Mystery")
+            else if(modelType.includes("Mystery"))
             {
+              console.log("WITHIN MYSTERY");
               pythonPath = '../Phython/Mystery_text.py';
             }
-            else if(modelType == "Sci Fi")
+            else if(modelType.includes("Sci Fi"))
             {
+              console.log("WITHIN SCIFI");
               pythonPath = '../Phython/Sci_Fi_text.py';
             }
             console.log("Path IS: " + pythonPath);
