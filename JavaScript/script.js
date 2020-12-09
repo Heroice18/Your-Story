@@ -29,6 +29,8 @@ $(document).ready(function() {
                   
                     console.log("Hop on by: " + typeof(pass));
                     console.log("Juming: " + pass);
+                    pass = pass.split(".");
+                    pass = pass.slice(0,3);
                     let response = {
                         username: "AI",
                         message: pass
