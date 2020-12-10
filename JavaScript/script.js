@@ -32,7 +32,7 @@ $(document).ready(function() {
                     pass = pass.charAt(0).toUpperCase() + pass.slice(1);
                     pass = pass.split(".");
                     pass = pass.slice(0,3);
-                    pass = pass.split(",");
+                    pass = pass.replace(",", "." );
                     pass = pass + ".\n";
                     let response = {
                         username: "AI",
