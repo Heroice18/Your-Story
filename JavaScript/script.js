@@ -19,7 +19,7 @@ $(document).ready(function() {
        console.log("3");
        if (chatService.sendMessage(text) == true) {
         console.log("4");
-            //   chatService.onMessageReceived();
+              // chatService.onMessageReceived();
                console.log("5");
         
                var pass;
@@ -31,7 +31,7 @@ $(document).ready(function() {
                     console.log("Juming: " + pass);
                     pass = pass.charAt(0).toUpperCase() + pass.slice(1);
                     pass = pass.split(".");
-                    pass = pass[0] + ". " + pass[1] + ". " + pass[2] + ". ";
+                    pass = pass[0] + ". " + pass[1] + ". " + pass[2] ;
                     // pass = pass.slice(0,3);
                     // pass = pass.toString();
                     // pass = pass.split(",")
@@ -71,7 +71,7 @@ function profanityCheck(){
     
     console.log("VALUE IS: " + stringData);
     
-    var profanities = new Array("ass", "cunt", "pope", "fuck", "bitch", "damn", 
+    var profanities = new Array("ass", "cunt", "fuck", "bitch", "damn", 
     "asshole", "faggot", "motherfucker", "dick", "pussy", 
     "bastard", "shit");
     

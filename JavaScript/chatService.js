@@ -159,6 +159,8 @@ sendMessage: function(message){
     // console.log("MEssage is: " + message.message);
     // savedAIContent = savedAIContent + message.message  + " ";
     messageArray.push(message);
+    console.log("OUR ARRAY: " + messageArray);
+
     //messageArray.push(testPhy());
     return true;
 },
@@ -200,9 +202,21 @@ onMessageReceived: function() {
             {
                 console.log("message from: " + value.username);
                 console.log("Message from AI: " + value.message);
-                savedAIContent +=  value.message  + " \n";
-                console.log("CHECKING: " +  savedAIContent);
+                console.log("DATA BEFORE REASSIGN: " + savedAIContent);
+                savedAIContent = "";
+                console.log("MESSAGEARRAY VALUES: " + messageArray.values());
+                $.each(messageArray, function(index, value) {
+                    console.log("DATA INSIDE: " + value.username +" " + value.message);
+
+                    if(value.username == "AI")
+                    {
+                        savedAIContent = savedAIContent + value.message + "\n";
+                    }
+                });
+
+                console.log("NOW SAVED: " + savedAIContent);
             }
+            
     
         }
         else {
