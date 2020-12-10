@@ -21,7 +21,7 @@ raw_text2 = raw_text2.lower()
 # length of text is the number of characters in it
 #print('Length of text: {} characters'.format(len(SciFitext)))
 
-model = tf.keras.models.load_model('../Phython/scfi_model.h5')
+model = tf.keras.models.load_model('../Phython/scifi_model.h5')
 
 # Read the data
 # Read, then decode for py2 compat.
