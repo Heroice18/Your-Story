@@ -281,6 +281,10 @@ function saveYourStory()
 
     console.log("Title is: " + fileTitle);
 
+    storyData = "Genre: " + localStorage.getItem("genre") + "\n" + 
+        "Character's name: " + localStorage.getItem("characterName") + "\n" +
+        "Character's age: " + localStorage.getItem("age") + "\n" + 
+        "Character's gender: " + localStorage.getItem("gender") + "\n";
     
     var titleStory = "";
     if(fileTitle != "")
@@ -289,7 +293,7 @@ function saveYourStory()
             savedAIContent.indexOf("-"),
             savedAIContent.lastIndexOf(" -")
         );
-
+            console.log("HEADER: " + header2);
         savedAIContent = savedAIContent.replace(header2, "");
         savedAIContent = savedAIContent.replace("-", "");
 
